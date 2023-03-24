@@ -2,7 +2,7 @@ import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
 // initialise the WooCommerceRestApi //
 const api = new WooCommerceRestApi({
-  url: "http://localhost/woocommercenextjs",
+  url: process.env.WOOCOMMERCE_URL,
   consumerKey: process.env.WOOCOMMERCE_KEY!,
   consumerSecret: process.env.WOOCOMMERCE_SECRET!,
   version: "wc/v3",

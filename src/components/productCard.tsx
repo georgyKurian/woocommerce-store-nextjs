@@ -10,13 +10,14 @@ const ProductCard = (props: Props) => {
   const { product } = props;
 
   return (
-    <Card>
+    <Card>  
       <ImageContainer>
         <Image
+          width={100}
+          height={80}
           src={product.images[0].src}
           alt={product.images[0].alt}
-          layout="fill"
-          objectFit="cover"
+            
         />
       </ImageContainer>
       <Details>
@@ -33,14 +34,12 @@ const ProductCard = (props: Props) => {
 export default ProductCard;
 
 const Card = styled.div`
-  width: 100%;
+  width: 25rem;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  /* height: 100%; */
-  padding-bottom: 100%; /* forces square aspect ratio */
 `;
 
 const Details = styled.div`
